@@ -1,0 +1,40 @@
+.addbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ecf1f5;
+  padding: 10px 20px;
+  border-radius: 40px;
+
+
+}
+
+.addbar > input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ecf1f5 ;
+}
+
+.addbar > input:focus {
+  outline: none;
+}
+
+
+.addbar > button {
+  border-radius: 50%;
+  width: 50px;
+  height: 47px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  background-color: #ff775e;
+  /*color: #eeeeee;*/
+  font-weight: bold;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

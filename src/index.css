@@ -1,0 +1,24 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("https://www.shutterstock.com/shutterstock/videos/1061481472/thumb/1.jpg?ip=x480");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #ff775e;
+  /*background-color: rgba(255, 119, 94, .7);*/
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
