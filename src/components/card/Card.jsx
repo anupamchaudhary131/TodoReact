@@ -5,7 +5,8 @@ import Item from "../item/Item.jsx";
 import axios from 'axios'
 
 const getTodos = async (setTodos, setCompleted) => {
-  const response = await axios.get('http://192.168.1.15:3000/todos')
+  const origin = window.location.origin
+  const response = await axios.get(`${origin}/todos`)
   const data = await response.data
   console.log(data)
   setTodos(data.todos)

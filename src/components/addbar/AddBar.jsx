@@ -6,7 +6,11 @@ import axios from "axios";
 const AddBar = (props) => {
   const [todo, setTodo] = React.useState('')
   const addTodo = async () => {
-    const response = await axios.post('http://192.168.1.15:3000/add', {todo: todo})
+    if (todo === '') {
+      return alert('Please enter a valid todo')
+    }
+    const origin = window.location.origin
+    const response = await axios.post(`${origin}/add`, {todo: todo})
     alert(response.data.message)
     setTodo('')
     props.setTodos((prev) => {

@@ -13,8 +13,8 @@ const Item = (props) => {
     if (input === " ") {
       return alert('Please enter a valid todo')
     }
-
-    const response = await axios.put(`http://localhost:3000/edit/${props.todo._id}`, {todo: input})
+    const origin = window.location.origin
+    const response = await axios.put(`${origin}/edit/${props.todo._id}`, {todo: input})
     const data = await response.data
     alert(data.message)
     props.setPrimary((prev) => {
@@ -30,7 +30,8 @@ const Item = (props) => {
   }
 
   const deleteTodo = async (id) => {
-    const response = await axios.delete(`http://localhost:3000/delete/${id}`)
+    const origin = window.location.origin
+    const response = await axios.delete(`${origin}/delete/${id}`)
     const data = await response.data
     alert(data.message)
     props.setPrimary((prev) => {
@@ -44,7 +45,8 @@ const Item = (props) => {
 
 
   const changeStatus = async (id, status) => {
-    const response = await axios.put(`http://localhost:3000/set/${id}`, {completed: status})
+    const origin = window.location.origin
+    const response = await axios.put(`${origin}/status/${id}`, {completed: status})
     const data = await response.data
     if (status) {
       props.setPrimary(data.todos)
