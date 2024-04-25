@@ -6,6 +6,7 @@ import axios from 'axios'
 
 const getTodos = async (setTodos, setCompleted) => {
   const origin = window.location.origin
+  console.log(origin)
   const response = await axios.get(`${origin}/todos`)
   const data = await response.data
   console.log(data)

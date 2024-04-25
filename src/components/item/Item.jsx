@@ -46,7 +46,7 @@ const Item = (props) => {
 
   const changeStatus = async (id, status) => {
     const origin = window.location.origin
-    const response = await axios.put(`${origin}/status/${id}`, {completed: status})
+    const response = await axios.put(`${origin}/set/${id}`, {completed: status})
     const data = await response.data
     if (status) {
       props.setPrimary(data.todos)
